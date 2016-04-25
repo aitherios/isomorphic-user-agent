@@ -29,7 +29,8 @@ module.exports = {
       compressor: {
         screw_ie8: true,
         warnings: false
-      }
+      },
+      comments: false
     })
   ]
 }

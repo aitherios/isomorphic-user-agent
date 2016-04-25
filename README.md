@@ -5,7 +5,7 @@ Returns user agent in browser/node
 ## Usage
 
 ```js
-ua = require('isomorphic-user-agent')
+var ua = require('isomorphic-user-agent')
 
 ua()
 ```

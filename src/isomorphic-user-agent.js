@@ -1,6 +1,6 @@
 import defaultUserAgent from 'default-user-agent'
 
-const defaultBrowserUserAgent = (_window) => {
+const defaultBrowserUserAgent = (_window = window) => {
   if (
     typeof _window !== 'undefined' &&
     _window !== null &&

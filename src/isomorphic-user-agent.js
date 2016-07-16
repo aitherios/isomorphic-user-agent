@@ -13,5 +13,5 @@ const defaultBrowserUserAgent = (_window = window) => {
 }
 
 export { defaultBrowserUserAgent as browserUserAgent }
-export default ({ browserUserAgent = defaultBrowserUserAgent }) =>
+export default (browserUserAgent = defaultBrowserUserAgent) =>
   browserUserAgent() || defaultUserAgent()

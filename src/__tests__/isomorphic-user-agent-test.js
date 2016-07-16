@@ -7,6 +7,14 @@ import DefaultUserAgent from 'default-user-agent'
 describe('IsomophicUserAgent', () => {
   let fakeBrowserUserAgent
 
+  it('is a function', () => {
+    expect(IsomophicUserAgent).toEqual(jasmine.any(Function))
+  })
+
+  it('returns a string', () => {
+    expect(IsomophicUserAgent()).toEqual(jasmine.any(String))
+  })
+
   describe('when browser', () => {
     const iphoneUserAgent = 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X)'
 
@@ -15,7 +23,7 @@ describe('IsomophicUserAgent', () => {
     })
 
     it('returns browser user agent', () => {
-      expect(IsomophicUserAgent({ browserUserAgent: fakeBrowserUserAgent })).toBe(iphoneUserAgent)
+      expect(IsomophicUserAgent(fakeBrowserUserAgent)).toBe(iphoneUserAgent)
     })
   })
 
@@ -26,7 +34,7 @@ describe('IsomophicUserAgent', () => {
 
     it('returns default-user-agent', () => {
       expect(
-        IsomophicUserAgent({ browserUserAgent: fakeBrowserUserAgent })
+        IsomophicUserAgent(fakeBrowserUserAgent)
       ).toBe(DefaultUserAgent())
     })
   })

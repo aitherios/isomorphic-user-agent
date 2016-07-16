@@ -1,13 +1,17 @@
-import DefaultUserAgent from 'default-user-agent'
+import defaultUserAgent from 'default-user-agent'
 
-export default () => {
+const defaultBrowserUserAgent = (_window) => {
   if (
-    typeof window !== 'undefined' &&
-    window !== null &&
-    window.navigator &&
-    window.navigator.userAgent
+    typeof _window !== 'undefined' &&
+    _window !== null &&
+    _window.navigator &&
+    _window.navigator.userAgent
   ) {
-    return window.navigator.userAgent
+    return _window.navigator.userAgent
   }
-  return DefaultUserAgent()
+  return null
 }
+
+export { defaultBrowserUserAgent as browserUserAgent }
+export default ({ browserUserAgent = defaultBrowserUserAgent }) =>
+  browserUserAgent() || defaultUserAgent()

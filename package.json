@@ -21,7 +21,7 @@
     "userAgent",
     "default-user-agent"
   ],
-  "author": "Team Magneto",
+  "author": "Renan Mendes Carvalho <aitherios@gmail.com> (https://github.com/aitherios)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/team-767/isomorphic-user-agent/issues"
@@ -79,5 +79,12 @@
         }
       ]
     }
-  }
+  },
+  "maintainers": [
+    "Renan Mendes Carvalho <aitherios@gmail.com> (https://github.com/aitherios)",
+  ],
+  "contributors": [
+    "Renan Mendes Carvalho <aitherios@gmail.com> (https://github.com/aitherios)",
+    "Guilherme Garnier <guilherme.garnier@gmail.com> (http://blog.guilhermegarnier.com)"
+  ]
 }

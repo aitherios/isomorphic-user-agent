@@ -9,7 +9,9 @@
     "transpile": "babel src -D -d dist --ignore '__tests__'",
     "bundle": "webpack --config webpack.config.js",
     "build": "npm run lint && npm run clean && npm run transpile && npm run bundle",
-    "lint": "eslint ./src"
+    "lint": "eslint ./src",
+    "preversion": "npm run test && npm run build",
+    "version": "git add package.json && git commit -m \"Bump version $npm_package_version\""
   },
   "repository": {
     "type": "git",
@@ -81,7 +83,7 @@
     }
   },
   "maintainers": [
-    "Renan Mendes Carvalho <aitherios@gmail.com> (https://github.com/aitherios)",
+    "Renan Mendes Carvalho <aitherios@gmail.com> (https://github.com/aitherios)"
   ],
   "contributors": [
     "Renan Mendes Carvalho <aitherios@gmail.com> (https://github.com/aitherios)",
